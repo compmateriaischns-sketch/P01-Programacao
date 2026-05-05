@@ -8,7 +8,7 @@ while True:
         jogador1, jogador2 = 0, 0
 
         for i in range(N):
-            A, B = [int(x) for x in input().strip().split(' ')]
+            A, B = input().strip().split(' ')
 
             if(A > B):
                 jogador1 += 1
