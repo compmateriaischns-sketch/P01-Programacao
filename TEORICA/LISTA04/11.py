@@ -1,14 +1,13 @@
-vet = [float(input("Digite os elementos do vet: ")) for l in range(5)]
-menor = 999999999
-menor = float(menor)
-vcrescente = []
-for j in range(5):
-    for i in range(5):
-        vet[i] = float(vet[i])
-        if vet[i] < menor:
-            menor = vet[i]
-            k = i
-    vcrescente.append(menor)
-    vet[k] = ''
+vet = [int(input("Digite os elementos do vet: ")) for l in range(5)]
 
-print(vcrescente)
+# Algoritmo de ordenação: Selection Sort
+for i in range(len(vet)):
+    # Encontra o índice do menor elemento no restante da lista
+    k = i
+    for j in range(i+1, len(vet)):
+        if vet[j] < vet[k]:
+            k = j
+    # Troca o elemento atual com o menor encontrado
+    vet[i], vet[k] = vet[k], vet[i]
+
+print("Vetor ordenado em ordem crescente:", vet)
